@@ -1,0 +1,215 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Saira Extra Condensed', sans-serif;
+}
+:root{
+    --textcolor:black;
+}
+a,li{
+    text-decoration: none;
+    list-style-type: none;
+    color: var(--textcolor);
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+#main{
+    height: auto;
+    width: 100vw;
+}
+#nav{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 15px;
+    border: 1px solid rgb(189, 163, 163);
+}
+.logo i{
+    font-size: 2.2em;
+}
+.logo h1{
+    font-size: 20px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+#nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.options i{
+    font-size: 1.3em;
+}
+#header{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    padding: 15px;
+    height: 10vh;
+    border: 1px solid rgb(189, 163, 163);
+}
+#header ul{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2vw;
+}
+#header span{
+    border: 2px solid rgb(220, 165, 173);
+    padding: 2px 15px;
+    background-color: rgb(241, 228, 230);
+    border-radius: 15px;
+    color: #7a7a7a;
+    text-transform: uppercase;
+}
+#products{
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    flex-wrap: wrap;
+    height: 80vh;
+}
+.about{
+    height: 40vh;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(241, 228, 230);
+    border: 1px solid rgb(189, 163, 163);
+}
+.about h3{
+    font-size: 35px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.795);
+}
+.about p{
+    font-size: 20px;
+    color: #7a7a7a;
+}
+.cards i span{
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 4px;
+    text-transform: uppercase;
+    margin: 6px;
+}
+.bag {
+    background-color:rgb(243, 243, 243);
+    padding: 4px 8px;
+    border-radius: 15px ;
+    cursor: pointer;
+    margin-top: 1vh;
+}
+.cards{
+    height: 40vh;
+    width: 25vw;
+    border: 1px solid rgb(189, 163, 163);
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-direction: column;
+    padding: 15px;
+}
+.fa-cart-plus{
+    border: 2px solid rgb(228, 179, 187);
+    border-radius: 25px;
+    padding: 8px;
+}
+.cards h2{
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: default;
+}
+.cards .stars :nth-child(-n+5){
+    font-size: .9em;
+    cursor: pointer;
+}
+.stars{
+    display: flex;
+    align-items: center;
+    
+}
+.stars :nth-child(n+6){
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: default;
+}
+.cards .stars :nth-child(-n+4){ 
+    color: gold;
+}
+.cards img{
+    margin-left: 5vw;
+}
+@media  screen and  (max-width:830px){
+    #products{
+        grid-template-columns: 33.3vw 33.3vw 33.3vw;
+    }
+    .cards,.about{
+    width: auto ; 
+    }
+    
+}
+@media  screen and  (max-width:700px){
+    #nav{
+        flex-direction: column;
+        height: auto;
+        gap: 3vh;
+    }
+    #nav ul{
+        justify-content: space-between;
+    }
+    #header{
+        height: auto;
+        flex-direction: column;
+    }
+    #header ul{
+        flex-direction: column;
+    }
+}
+@media  screen and  (max-width:575px){
+    #products{
+        grid-template-columns: 50vw 50vw;
+    }
+    .cards,.about{
+    width: auto ;        
+    }
+    
+}
+@media  screen and  (max-width:500px){
+    #nav ul{
+        flex-direction: column;
+    }
+}
+@media  screen and  (max-width:400px){
+    #products{
+        grid-template-columns: 50vw;
+    }
+    .cards,.about{
+    width: 100vw ;  
+    justify-content: center;      
+    align-items: center;
+    }
+}
+
+
+
+
